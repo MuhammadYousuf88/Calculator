@@ -7,46 +7,55 @@
   	<link rel="stylesheet" href="style.css">
   </head>
   <body>
-	<!--
+	
+	
+	
+	
+	
+<!--	
 	<div>
 		<input type="text" id="userInput">
 		<button onclick="values(1)">1</button>
 	</div>
-	-->
+-->
+	
+	
+	
+	
 <div class="main">	
 	<div class="divInput">
-		<input type="text" placeholder="0" class="userInput" id="userInput">
+		<input type="text" placeholder="0" class="userInput" id="screen" disabled />
 	</div>
 	<div class="mainButton">
 	<div class="childButton">
 	<div class="divButtons1">
-		<button class="grayButton" onclick="erase()">AC</button>
-		<button class="grayButton" onclick="del()">DEL</button>
-		<button class="grayButton perButton" onclick="values(%)">%</button>
-		<button class="yellowButton" onclick="values(/)">÷</button>
+		<button class="grayButton" value="AC" onclick="clearScreen()">AC</button>
+		<button class="grayButton" value="DEL" onclick="del()">DEL</button>
+		<button class="grayButton perButton" value="%" onclick="values('%')">%</button>
+		<button class="yellowButton" value="/" onclick="operationSign(value)">÷</button>
 	</div>
 	<div class="divButtons2">
-		<button class="randomButton" onclick="values(7)">7</button>
-		<button class="randomButton" onclick="values(8)">8</button>
-		<button class="randomButton" onclick="values(9)">9</button>
-		<button class="yellowButton" onclick="values(*)">×</button>
+		<button class="randomButton" value="7" onclick="numbers(value)">7</button>
+		<button class="randomButton" value="8" onclick="numbers(value)">8</button>
+		<button class="randomButton" value="9" onclick="numbers(value)">9</button>
+		<button class="yellowButton" value="*" onclick="operationSign(value)">×</button>
 	</div>
 	<div class="divButtons3">
-		<button class="randomButton" onclick="values(4)">4</button>
-		<button class="randomButton" onclick="values(5)">5</button>
-		<button class="randomButton" onclick="values(6)">6</button>
-		<button class="yellowButton" onclick="values(-)">−</button>
+		<button class="randomButton" value="4" onclick="numbers(value)">4</button>
+		<button class="randomButton" value="5" onclick="numbers(value)">5</button>
+		<button class="randomButton" value="6" onclick="numbers(value)">6</button>
+		<button class="yellowButton" value="-" onclick="operationSign(value)">-</button>
 	</div>
 	<div class="divButtons4">
-		<button class="randomButton" onclick="values(1)">1</button>
-		<button class="randomButton" onclick="values(2)">2</button>
-		<button class="randomButton" onclick="values(3)">3</button>
-		<button class="yellowButton" onclick="values(+)">+</button>
+		<button class="randomButton" value="1" onclick="numbers(value)">1</button>
+		<button class="randomButton" value="2" onclick="numbers(value)">2</button>
+		<button class="randomButton" value="3" onclick="numbers(value)">3</button>
+		<button class="yellowButton" value="+" onclick="operationSign(value)">+</button>
 	</div>
 	<div class="divButtons5">
-		<button class="doubleButton" onclick="values(0)">0</button>
-		<button class="randomButton" onclick="values(.)">.</button>
-		<button class="yellowButton" onclick="values(=)">=</button>
+		<button class="doubleButton" value="0" onclick="numbers(value)">0</button>
+		<button class="randomButton" value="." onclick="numbers(value)">.</button>
+		<button class="yellowButton" value="=" onclick="sum()">=</button>
 	</div>
 	</div>
 	</div>
@@ -56,3 +65,69 @@
 	<script src="app.js"></script>
   </body>
 </html>
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .calculator {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+        }
+        input {
+            width: 100px;
+            text-align: center;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <h2>Simple Calculator</h2>
+        
+        <input type="number" id="numInput" placeholder="Enter number">
+        
+        <br>
+        
+        <button onclick="addNumber()">Add to 10</button>
+        
+        <p class="result">Result: <span id="result">0</span></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+-->
